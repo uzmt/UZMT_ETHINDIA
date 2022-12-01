@@ -1,0 +1,87 @@
+.App {
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.tab-container {
+  max-width: 500px;
+  position: fixed;
+  bottom: 0px;
+  height: 72px;
+  padding: 8px 40px 16px;
+  width: 100%;
+  @extend %flex-eq;
+  background: #000000;
+
+  backdrop-filter: blur(16px);
+  border-top: 0.5px solid rgba(128, 128, 128, 0.5);
+
+  &.light {
+    background-color: white;
+  }
+
+  .tab {
+    position: relative;
+  }
+
+  .plus-container {
+    @extend %flex-center;
+    width: 48px;
+    height: 48px;
+
+    background: #3772ff;
+    border-radius: 48px;
+  }
+}
+
+.lunch-button {
+  background: #000000;
+  border-radius: 12px;
+  padding: 12px;
+
+  &.type2 {
+    border: 2px solid #ffffff;
+    border-radius: 40px;
+  }
+
+  p {
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+
+    margin-right: 5px;
+  }
+  @extend %flex-center;
+}
+
+.connect-button {
+  padding: 10px 16px;
+
+  background: #e8e8e8;
+  border-radius: 10px;
+
+  p {
+    text-align: center;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+
+    color: #000000;
+  }
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}

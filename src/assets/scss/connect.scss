@@ -1,0 +1,42 @@
+.wallet-list {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 154px;
+
+  .inner {
+    padding: 24px;
+  }
+}
+
+.wallet-item {
+  width: 314px;
+  flex-shrink: 0;
+  padding: 16px;
+  background: #f6f6f6;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  margin-right: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .token-img {
+    margin-right: 12px;
+  }
+
+  .check-circle {
+    width: 22px;
+    height: 22px;
+    border: 1px solid gray;
+    border-radius: 50%;
+  }
+}
+
+.wallet-item-container {
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  display: flex;
+  align-items: center;
+}

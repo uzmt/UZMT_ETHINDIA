@@ -1,0 +1,23 @@
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%flex-eq {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+%block-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%flex-column-center {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

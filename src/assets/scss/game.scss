@@ -1,0 +1,74 @@
+.game-container {
+  background-color: black;
+}
+
+.game-list {
+  margin-top: 15px;
+  @extend %flex-center;
+  flex-wrap: wrap;
+  padding-left: 31px;
+  padding-right: 31px;
+  padding-bottom: 30px;
+
+  .game-item {
+    width: calc(50% - 8px);
+
+    &:nth-child(odd) {
+      margin-right: 4px;
+    }
+    &:nth-child(even) {
+      margin-left: 4px;
+    }
+    .game-profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      background: #28292f;
+      border: 1px solid #484950;
+      border-radius: 6px;
+      margin-bottom: 6px;
+      height: 120px;
+    }
+
+    .game-button {
+      background: #34363e;
+      border-radius: 6px;
+      padding: 12px 8px;
+      margin-bottom: 6px;
+      text-align: center;
+    }
+  }
+}
+
+.game-tap {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  display: flex;
+
+  .tab {
+    width: 50%;
+    position: relative;
+
+    &.active:after {
+      bottom: -10px;
+      content: '';
+      position: absolute;
+      border-bottom: 3px solid white;
+      width: 120px;
+      height: 0px;
+      border-radius: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+
+      color: #ffffff;
+    }
+  }
+}
