@@ -1,0 +1,90 @@
+.banner {
+  position: relative;
+  img.banner-img {
+    position: relative;
+    width: 100%;
+    height: 182px;
+    border-bottom: 3px solid white;
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: -48px;
+    .inner {
+      display: inline-block;
+      border: 3px solid white;
+      border-radius: 50%;
+    }
+
+    img {
+      width: 88px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.nft-item {
+  position: relative;
+  width: calc(50% - 4px);
+  margin-bottom: 16px;
+
+  &.full {
+    width: 100%;
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+    &:nth-child(even) {
+      margin-left: 0;
+    }
+  }
+  img {
+    width: 100%;
+  }
+
+  &:nth-child(odd) {
+    margin-right: 4px;
+  }
+  &:nth-child(even) {
+    margin-left: 4px;
+  }
+
+  .price {
+    display: inline-flex;
+    align-items: center;
+    border: 0.5px dashed #ffffff;
+    border-radius: 12px;
+    padding: 2px 12px 2px 8px;
+
+    img {
+      width: 8px;
+    }
+  }
+}
+
+.cnt-container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+p.cnt-font {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+span.cnt {
+  font-family: 'Space Grotesk';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+}

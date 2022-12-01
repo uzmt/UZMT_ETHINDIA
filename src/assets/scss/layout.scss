@@ -5,15 +5,24 @@
 .app {
   max-width: 500px;
   margin: 0 auto;
+
+  &.black {
+    background-color: black;
+  }
+}
+
+.tab-wrap {
+  box-sizing: border-box;
+  width: 100%;
+  position: fixed;
+  bottom: 30px;
+  max-width: 500px;
+  height: 72px;
 }
 
 .tab-container {
-  max-width: 500px;
-  position: fixed;
-  bottom: 0px;
-  height: 72px;
-  padding: 8px 40px 16px;
-  width: 100%;
+  padding: 16px 40px;
+  padding-bottom: 40px;
   @extend %flex-eq;
   background: #000000;
 
