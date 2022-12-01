@@ -7,7 +7,6 @@ import { TabRent } from "components/profile/TabRent"
 import { TabInSell } from "components/profile/TabInSell"
 
 export const Profile = () => {
-
   const [tab, setTab] = useState<"my" | "sell" | "rent">("my")
 
   return <div className="app black">

@@ -1,6 +1,7 @@
 import CalOut from "assets/img/cal-out.svg"
 import Dot from "assets/img/dot.svg"
 import ProjectImg from "assets/img/project-img.png"
+import { CommonButton } from "components/common/CommonButton"
 
 
 export const NftTabDetail = () => {
@@ -28,7 +29,7 @@ export const NftTabDetail = () => {
       </div>
     </div>
 
-    <div className="">
+    <div className="mb24">
       <p className="content-title mb12">
         Rental period
       </p>
@@ -48,6 +49,62 @@ export const NftTabDetail = () => {
           AM 12:00
         </p>
 
+      </div>
+    </div>
+
+    <div className="">
+      <p className="content-title mb12">
+        Properties
+      </p>
+
+      <div className="properties-box-container">
+        <div className="properties-box">
+          <div className="mb8">
+            <p className="content-title">Move</p>
+          </div>
+          <div className="mb8">
+            <CommonButton text="Aquastock" containerClass="middle" />
+          </div>
+          <div className="opacity3">
+            <p>3% have this trait</p>
+          </div>
+        </div>
+
+        <div className="properties-box">
+          <div className="mb8">
+            <p className="content-title">Move</p>
+          </div>
+          <div className="mb8">
+            <CommonButton text="Aquastock" containerClass="middle" />
+          </div>
+          <div className="opacity3">
+            <p>3% have this trait</p>
+          </div>
+        </div>
+
+        <div className="properties-box">
+          <div className="mb8">
+            <p className="content-title">Move</p>
+          </div>
+          <div className="mb8">
+            <CommonButton text="Aquastock" containerClass="middle" />
+          </div>
+          <div className="opacity3">
+            <p>3% have this trait</p>
+          </div>
+        </div>
+
+        <div className="properties-box">
+          <div className="mb8">
+            <p className="content-title">Move</p>
+          </div>
+          <div className="mb8">
+            <CommonButton text="Aquastock" containerClass="middle" />
+          </div>
+          <div className="opacity3">
+            <p>3% have this trait</p>
+          </div>
+        </div>
       </div>
     </div>
   </>

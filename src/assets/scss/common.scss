@@ -64,6 +64,9 @@
     background-color: white;
   }
 }
+.pos-rel {
+  position: relative;
+}
 
 .content {
   position: relative;
@@ -114,6 +117,10 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   height: 58px;
+
+  &.black {
+    background-color: black;
+  }
 
   a {
     display: flex;
