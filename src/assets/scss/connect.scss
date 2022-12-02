@@ -39,10 +39,37 @@
 }
 
 .mint-item {
-  img {
+  background: #f6f6f6;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 19px;
+  .mint-item img {
     width: 100%;
   }
 
-  .mint-info {
+  .price {
+    display: inline-flex;
+    align-items: center;
+    border: 0.5px dashed #ffffff;
+    border-radius: 12px;
+    padding: 2px 12px 2px 8px;
+
+    img {
+      width: 8px;
+    }
   }
+}
+
+.need-input {
+  background-color: #eaeaea;
+  border: 1px dashed #3772ff;
+  border-radius: 24px;
+  min-width: 50px;
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 말줄임 적용 */
+  height: 20px;
 }

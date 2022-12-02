@@ -1,9 +1,13 @@
+
 import Main from "assets/img/rent-img.png"
 import User from "assets/img/user.svg"
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { CommonButton } from "components/common/CommonButton"
 import Eth from "assets/img/eth-b.svg"
 
-export const Step2 = ({ next, back }: { next: () => void, back: () => void }) => {
+export const StepEnd = () => {
+  const navigate = useNavigate()
 
   return <>
     <div className="mb36">
@@ -61,8 +65,8 @@ export const Step2 = ({ next, back }: { next: () => void, back: () => void }) =>
     </div>
 
     <div className="d-flex">
-      <CommonButton text="Edit" containerClass="flex1 black mr8" onClick={back} />
-      <CommonButton text="Rent" containerClass="flex2" onClick={next} />
+      <CommonButton text="Sell list" containerClass="flex1 black mr8" />
+      <CommonButton text="Profile" containerClass="flex2" onClick={() => navigate("/home")} />
     </div>
   </>
 }

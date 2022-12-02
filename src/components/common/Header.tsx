@@ -9,7 +9,7 @@ export const Header = ({
   const nav = useNavigate()
 
   return <div className={`common-menu ${theme}`}>
-    <div className="icon" onClick={() => hasBack ? nav(-1) : backFn ? backFn : null} >
+    <div className="icon" onClick={() => hasBack ? nav(-1) : backFn ? backFn() : null} >
       {(hasBack || backFn) && theme === "dark" && <img src={Arr} alt="arr-left" />}
       {(hasBack || backFn) && theme === "light" && <img src={ArrB} alt="arr-left" />}
     </div>
