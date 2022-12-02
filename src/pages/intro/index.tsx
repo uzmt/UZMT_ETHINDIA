@@ -20,6 +20,7 @@ import { IntroSlides } from './IntroSlides';
 import '../../assets/scss/intro-temp.scss';
 import { IntroCard2 } from './IntroCard2';
 import ArrB from 'assets/img/arrow-right-black.svg';
+import { IntroManagers } from './IntroManagers';
 
 const items = [
   {
@@ -34,31 +35,31 @@ const items = [
   },
   {
     src: UZUMETA2,
-    title: 'Darkness',
-    platform: 'Yu-Gi-Yn',
+    title: 'Rent my Axies',
+    platform: 'AXIE Infinity',
     date: '2022.11.31 ~ 2022.12.05',
     profile_image: Profile,
-    profile_name: 'Mariey Stanton',
+    profile_name: 'Chance Mango',
     profile_rent: 23201,
     amount: 0.521,
   },
   {
     src: UZUMETA3,
-    title: 'Darkness',
-    platform: 'Yu-Gi-Yn',
+    title: 'It\'s over 9000',
+    platform: 'Decentraland Wearables',
     date: '2022.11.31 ~ 2022.12.05',
     profile_image: Profile,
-    profile_name: 'Mariey Stanton',
+    profile_name: 'Marilyn Curtis',
     profile_rent: 23201,
     amount: 0.521,
   },
   {
     src: UZUMETA4,
     title: 'Darkness',
-    platform: 'Yu-Gi-Yn',
+    platform: 'Sandbox',
     date: '2022.11.31 ~ 2022.12.05',
     profile_image: Profile,
-    profile_name: 'Mariey Stanton',
+    profile_name: 'Alfonso Bergson',
     profile_rent: 23201,
     amount: 0.521,
   },
@@ -71,27 +72,27 @@ const items2 = [
     platform: 'Yu-Gi-Yn',
     date: '2022.11.31 ~ 2022.12.05',
     profile_image: Profile2,
-    profile_name: 'Mariey Stanton',
+    profile_name: 'Adison Saris',
     profile_rent: 23201,
     amount: 0.521,
   },
   {
     src: CARD2,
-    title: 'Darkness',
-    platform: 'Yu-Gi-Yn',
+    title: 'My Axie...is angry!',
+    platform: 'Axie Infinity',
     date: '2022.11.31 ~ 2022.12.05',
     profile_image: Profile2,
-    profile_name: 'Mariey Stanton',
+    profile_name: 'Terry Westervelt',
     profile_rent: 23201,
     amount: 0.521,
   },
   {
     src: CARD3,
-    title: 'Darkness',
-    platform: 'Yu-Gi-Yn',
+    title: 'SuperLens',
+    platform: 'Decentraland Wearables',
     date: '2022.11.31 ~ 2022.12.05',
     profile_image: Profile2,
-    profile_name: 'Mariey Stanton',
+    profile_name: 'Adison Philips',
     profile_rent: 23201,
     amount: 0.521,
   },
@@ -212,6 +213,12 @@ export const Intro = () => {
         <div className="rent-container">
           <h2>Start Rent Today</h2>
           <div className="desc">
+            <div className='point point1'></div>
+            <div className='point point2'></div>
+            <div className='point point3'></div>
+            <div className='point point4'></div>
+            <div className='point point5'></div>
+            <div className='point point6'></div>
             In some countries, it was so expensive to start web3 games. However, our
             <br />
             rental protocol breaks the obstacles to play and earn! Just Play It after
@@ -246,6 +253,7 @@ export const Intro = () => {
               <p>More Items</p>
               <img src={ArrB} alt="star" />
             </Link>
+            <p>There are a lot of items you want!</p>
           </div>
         </div>
       </div>
@@ -261,7 +269,11 @@ export const Intro = () => {
             UZUMETA is the perfect place to find your partner!
           </div>
 
-          <div className="flow-managers"></div>
+          <div className="flow-managers">
+            <IntroManagers />
+            <IntroManagers />
+            <IntroManagers />
+          </div>
         </div>
       </div>
 

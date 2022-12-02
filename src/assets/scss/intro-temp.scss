@@ -13,10 +13,10 @@
       position: absolute;
     }
     :nth-of-type(1) {
-      top: -200px;
+      top: -300px;
     }
     :nth-of-type(2) {
-      top: 165px;
+      top: 65px;
       left: 115px;
     }
     :nth-of-type(3) {
@@ -48,7 +48,8 @@
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-    p {
+    > p {
+      padding-top:100px;
       font-size: 16px;
       line-height: 20px;
     }
@@ -64,6 +65,10 @@
           display: inline-block;
           font-size: 24px;
           line-height: 36px;
+        }
+        img{
+          scale: 2;
+          margin-left: 5px;
         }
       }
     }
@@ -272,9 +277,83 @@
       line-height: 36px;
       color: rgba(255, 255, 255, 0.6);
       margin-bottom: 52px;
+      display: inline-block;
+      position: relative;
+
+      &:before{
+        position: absolute;
+        top:-120px;
+        left:-190px;
+        content: url(../img/rent-profile1.png);
+      }
+      &:after{
+        position: absolute;
+        bottom:-120px;
+        right:-190px;
+        content: url(../img/rent-profile2.png);
+      }
+      .point{
+        position: absolute;
+        content: "";
+      }
+
+      .point1{
+        left:-200px;
+        top:150px;
+        width:22px;
+        height:21px;
+        background: #9eFF00;
+        filter: blur(15px);
+        border-radius: 5px;
+      }
+      .point2{
+        left:0px;
+        top:150px;
+        width:90px;
+        height:88px;
+        background: #FFEAAC;
+        filter: blur(5px);
+        border-radius: 20px;
+      }
+      .point3{
+        left:70px;
+        top:-70px;
+        width:59px;
+        height:57px;
+        background: #DBFF00;
+        filter: blur(10px);
+        border-radius: 10px;
+      }
+      .point4{
+        right:70px;
+        top:100px;
+        width:51px;
+        height:49px;
+        background: #0047FF;
+        filter: blur(10px);
+        border-radius: 10px;
+      }
+      .point5{
+        right:-50px;
+        top:-100px;
+        width:91px;
+        height:88px;
+        background: #59AFFF;
+        filter: blur(5px);
+        border-radius: 20px;
+      }
+      .point6{
+        right:-160px;
+        top:-50px;
+        width:16px;
+        height:16px;
+        background: #AD00FF;
+        filter: blur(15px);
+        border-radius: 5px;
+      }
     }
     .LaunchButton {
-      display: inline-block;
+      display: block;
       a {
         display: inline-block;
         margin: 0;
@@ -285,6 +364,10 @@
           font-size: 24px;
           line-height: 36px;
           display: inline-block;
+        }
+        img{
+          scale: 2;
+          margin-left: 5px;
         }
       }
     }
@@ -360,6 +443,7 @@
                 display: flex;
                 align-items: center;
                 gap: 5px;
+                white-space: nowrap;
               }
             }
           }
@@ -416,6 +500,7 @@
       border: 2px solid #000;
       border-radius: 40px;
       padding: 16px 40px;
+      margin-bottom:16px;
       p {
         display: inline-block;
         color: #000;
@@ -426,6 +511,11 @@
       img {
         vertical-align: baseline;
       }
+    }
+    > p{
+      font-size:16px;
+      line-height: 19px;
+      color:rgba(0,0,0,0.6);
     }
   }
 }
@@ -445,6 +535,56 @@
     font-size: 22px;
     line-height: 29px;
     margin-bottom: 72px;
+  }
+  
+  .flow-managers{
+    position: relative;
+    max-width:1920px;
+    margin: 0 auto;
+    overflow: hidden;
+    .managers{
+      position: relative;
+      display:block;
+      height:130px;
+      margin-bottom: 24px;
+      white-space: nowrap;
+      width:300%;
+      overflow: hidden;
+  
+      &:nth-of-type(1){
+        left:-150px;
+      }
+      &:nth-of-type(3){
+        left:-300px;
+      }
+  
+      .manager-card{
+        display:block;
+        float:left;
+        padding:25px;
+        display:flex;
+        background-color:#F4F4F4;
+        border-radius: 30px;
+        width:370px;
+        margin-right:24px;
+        .manager-card-profile-info{
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 30px;
+          gap:12px;
+          h4{
+            color:#000;
+            text-align: left;
+            font-size:24px;
+          }
+          p{
+            font-size:16px;
+            color:rgba(0,0,0,0.7);
+          }
+        }
+      }
+  }
   }
 }
 
@@ -494,6 +634,10 @@
           font-size: 24px;
           line-height: 36px;
           display: inline-block;
+        }
+        img{
+          scale: 2;
+          margin-left: 5px;
         }
       }
     }
