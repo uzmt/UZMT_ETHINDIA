@@ -1,3 +1,21 @@
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../font/WhyteInktrap-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../font/WhyteInktrap-Medium.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../font/WhyteInktrap-Bold.ttf');
+  font-weight: 700;
+}
+
 .bold {
   font-weight: bold !important;
 }
@@ -29,6 +47,9 @@
 .opacity5 {
   opacity: 0.5 !important;
 }
+.opacity8 {
+  opacity: 0.8 !important;
+}
 .color-black {
   color: black !important;
 }
@@ -42,6 +63,9 @@
   &.white {
     background-color: white;
   }
+}
+.pos-rel {
+  position: relative;
 }
 
 .content {
@@ -94,6 +118,10 @@
   border-radius: 12px;
   height: 58px;
 
+  &.black {
+    background-color: black;
+  }
+
   a {
     display: flex;
     width: 100%;
@@ -120,10 +148,10 @@
   padding: 8px 12px;
   @extend %flex-center;
   height: 58px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
 
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   a {
     display: flex;
     width: 100%;
@@ -143,6 +171,19 @@
     letter-spacing: -0.04em;
 
     color: #ffffff;
+  }
+}
+
+.button-type3 {
+  padding: 8px 12px;
+  @extend %flex-center;
+  height: 58px;
+  border-radius: 12px;
+  background: #ff7a7a;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+  &.middle {
+    height: 42px;
   }
 }
 
@@ -199,6 +240,13 @@
 .eth {
   padding-left: 17px;
   background-image: url('../img/eth.svg');
+  background-repeat: no-repeat;
+  background-position: left -6px center;
+}
+
+.eth-b {
+  padding-left: 17px;
+  background-image: url('../img/eth-b.svg');
   background-repeat: no-repeat;
   background-position: left -6px center;
 }
@@ -365,6 +413,17 @@ p.title {
   margin-bottom: 12px;
 }
 
+h2.big {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 30px;
+  /* identical to box height, or 75% */
+
+  letter-spacing: -0.04em;
+
+  color: #ffffff;
+}
+
 h2 {
   font-family: 'Whyte Inktrap';
   font-weight: 700;
@@ -372,8 +431,18 @@ h2 {
   line-height: 38px;
 
   letter-spacing: -0.04em;
-
   color: #000000;
+}
+
+p.h2-desc {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  /* identical to box height, or 167% */
+
+  letter-spacing: -0.04em;
+
+  color: #ffffff;
 }
 
 h3 {

@@ -150,32 +150,39 @@
 
 .game-tap {
   padding-top: 22px;
-  padding-bottom: 22px;
+  padding-bottom: 10px;
   display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
   .tab {
-    width: 50%;
     position: relative;
 
-    &.active:after {
-      bottom: -10px;
-      content: '';
-      position: absolute;
-      border-bottom: 3px solid white;
-      width: 120px;
-      height: 0px;
-      border-radius: 20px;
-      left: 50%;
-      transform: translateX(-50%);
+    &.active {
+      p {
+        opacity: 1;
+      }
+      &:after {
+        width: 100%;
+        bottom: -10px;
+        content: '';
+        position: absolute;
+        border: 2px solid #3772ff;
+        border-radius: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
 
     p {
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 30px;
-      text-align: center;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 26px;
+
+      letter-spacing: -0.04em;
 
       color: #ffffff;
+      opacity: 0.3;
     }
   }
 }

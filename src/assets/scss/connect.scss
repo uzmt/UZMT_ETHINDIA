@@ -1,8 +1,5 @@
 .wallet-list {
   width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 154px;
 
   .inner {
     padding: 24px;
@@ -39,4 +36,13 @@
   overflow-x: scroll;
   display: flex;
   align-items: center;
+}
+
+.mint-item {
+  img {
+    width: 100%;
+  }
+
+  .mint-info {
+  }
 }

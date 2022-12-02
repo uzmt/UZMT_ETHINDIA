@@ -1,16 +1,13 @@
 import User from "assets/img/user.svg"
 import { Header } from "components/common/Header"
-import Main from "assets/img/main-img.png"
+import NftImg from "assets/img/nft-img-no-border.png"
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import User1 from "assets/img/user1.svg"
 import User2 from "assets/img/user2.svg"
 import User3 from "assets/img/user3.svg"
-import Copy from "assets/img/copy.svg"
-import CalIn from "assets/img/cal-in.svg"
-import CalOut from "assets/img/cal-out.svg"
-import Dot from "assets/img/dot.svg"
-import ProjectImg from "assets/img/project-img.png"
+import { NftTabDetail } from "components/detail/NftTabDetail"
+import { NftTabInfo } from "components/detail/NftTabInfo"
 
 export const NftInfo = () => {
   const [tab, setTab] = useState<"detail" | "info">("detail")
@@ -24,25 +21,25 @@ export const NftInfo = () => {
     <div className="content full black">
       <div className="nft-detail mb50">
         <div className="nft-img">
-          <img src={Main} alt="" />
+          <img src={NftImg} alt="" />
         </div>
         <div className="img-detail detail">
           <div className="img-top-info">
             <p className="title">
-              Darkness
+              Axie #35786
             </p>
 
             <div className="author-container">
               <div className="mr24">
-                <p className="author dot-icon">
-                  Yu-Gi-Yn
+                <p className="author local-icon">
+                  Axie Infinity
                 </p>
               </div>
               <p className="date date-icon">2022. 11. 31 ~ 2022. 12. 05</p>
             </div>
           </div>
 
-          <div className="card-info">
+          <div className="card-info mt20">
             <div className="profile-container mr23">
               <div className="user-profile">
                 <img src={User} alt="user-icon" />
@@ -80,120 +77,9 @@ export const NftInfo = () => {
 
       <div className="pl24 pr24">
         <div className="info">
-          {tab === "detail" && <>
-            <div className="mb24">
-              <p className="content-title mb12">
-                Project
-              </p>
-              <div className="over-view">
-                <div className="d-flex y-center has-arr mb20">
-                  <div className="dot-big">
-                    <img src={Dot} alt="" />
-                  </div>
-                  <div>
-                    <p className="content-title">
-                      Yu-Gi-Yn
-                    </p>
-                    <p>
-                      NFT
-                    </p>
-                  </div>
-                </div>
+          {tab === "detail" && <NftTabDetail />}
 
-                <p className="mb20">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
-                </p>
-
-                <img src={ProjectImg} alt="" />
-              </div>
-            </div>
-
-            <div className="">
-              <p className="content-title mb12">
-                Rental period
-              </p>
-
-              <div className="rental-box mb12 has-arr">
-                <div>
-                  <img src={CalOut} alt="" />
-                </div>
-                <div>
-                  <p className="content-title">
-                    2022. 11. 31
-                  </p>
-                  <p>
-                    AM 12:00
-                  </p>
-                </div>
-              </div>
-
-              <div className="rental-box has-arr">
-                <div>
-                  <img src={CalIn} alt="" />
-                </div>
-                <div>
-                  <p className="content-title">
-                    2022. 11. 31
-                  </p>
-                  <p>
-                    AM 12:00
-                  </p>
-                </div>
-              </div>
-            </div>
-          </>}
-
-          {tab === "info" && <>
-            <div className="mb24">
-              <p className="content-title mb12">
-                Contract Address
-              </p>
-              <div className="copy-container">
-                <p>
-                  Tokenkd31021mdoq301...mdoq301eQ5D
-                </p>
-                <img src={Copy} alt="" />
-              </div>
-            </div>
-
-            <div className="mb24">
-              <p className="content-title mb12">
-                Token ID
-              </p>
-              <div className="copy-container">
-                <p>
-                  Tokenkd31021mdoq301...mdoq301eQ5D
-                </p>
-                <img src={Copy} alt="" />
-              </div>
-            </div>
-            <div className="mb24">
-              <p className="content-title mb12">
-                Token Standard
-              </p>
-              <div className="common-box">
-                <p>Metaplex</p>
-              </div>
-            </div>
-
-            <div className="mb24">
-              <p className="content-title mb12">
-                Blockchain
-              </p>
-              <div className="common-box">
-                <p>Etherium</p>
-              </div>
-            </div>
-
-            <div className="mb24">
-              <p className="content-title mb12">
-                Matadata
-              </p>
-              <div className="common-box">
-                <p>Centralized</p>
-              </div>
-            </div>
-          </>}
+          {tab === "info" && <NftTabInfo />}
 
           <div className="line"></div>
         </div>

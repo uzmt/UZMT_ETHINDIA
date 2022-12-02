@@ -10,26 +10,27 @@ import { useNavigate } from "react-router-dom"
 
 export const BottomTab = ({ activeTab, theme = "dark" }: { activeTab?: string, theme?: "dark" | "light" }) => {
   const nav = useNavigate()
-  return <div className={`tab-container ${theme}`}>
-    <div className="tab" onClick={() => nav("/home")}>
-      {theme === "dark" && <img src={Home} />}
-      {theme === "light" && <img src={HomeL} />}
-    </div>
-    <div className="tab" onClick={() => nav("/search")}>
-      {theme === "dark" && <img src={Search} />}
-      {theme === "light" && <img src={SearchL} />}
-    </div>
-    <div className="tab" onClick={() => nav("/connect")}>
-      <div className="plus-container">
-        <img src={Plus} alt="" />
+  return <div className="tab-wrap">
+    <div className={`tab-container ${theme}`}>
+      <div className="tab" onClick={() => nav("/home")}>
+        {theme === "dark" && <img src={Home} />}
+        {theme === "light" && <img src={HomeL} />}
       </div>
-    </div>
-    <div className="tab" onClick={() => nav("/chat")}>
-      {theme === "dark" && <img src={Social} />}
-      {theme === "light" && <img src={SocialL} />}
-    </div>
-    <div className="tab" onClick={() => nav("/profile")}>
-      <img src={User} alt="" />
-    </div>
-  </div>
+      <div className="tab" onClick={() => nav("/search")}>
+        {theme === "dark" && <img src={Search} />}
+        {theme === "light" && <img src={SearchL} />}
+      </div>
+      <div className="tab" onClick={() => nav("/connect")}>
+        <div className="plus-container">
+          <img src={Plus} alt="" />
+        </div>
+      </div>
+      <div className="tab" onClick={() => nav("/chat")}>
+        {theme === "dark" && <img src={Social} />}
+        {theme === "light" && <img src={SocialL} />}
+      </div>
+      <div className="tab" onClick={() => nav("/profile")}>
+        <img src={User} alt="" />
+      </div>
+    </div></div>
 }

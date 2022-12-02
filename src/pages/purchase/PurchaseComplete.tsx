@@ -49,7 +49,8 @@ export const PurchaseComplete = () => {
             </div>
             <p className="date date-icon">2022. 11. 31 ~ 2022. 12. 05</p>
           </div>
-        </div>}
+        </div>
+        }
 
 
         <div className={`button-button ${showQr ? "x-center" : ""}`}>
