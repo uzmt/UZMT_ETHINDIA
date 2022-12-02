@@ -14,7 +14,7 @@
     bottom: -48px;
     .inner {
       display: inline-block;
-      border: 5px solid black;
+      border: 8px solid black;
       border-radius: 50%;
     }
 
@@ -66,6 +66,14 @@
       width: 8px;
     }
   }
+}
+
+.edit-button {
+  display: inline-flex;
+  padding: 8px 36px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
 }
 
 .cnt-container {

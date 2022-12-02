@@ -4,14 +4,17 @@ import Nft2 from "assets/img/nft2.png"
 import Nft3 from "assets/img/nft3.png"
 import Nft4 from "assets/img/nft4.png"
 import Nft5 from "assets/img/nft5.png"
+import { CommonButton } from "components/common/CommonButton"
 import User from "../../assets/img/tab-user.svg"
 
-export const NftCell = ({ num }: { num?: number }) => {
+export const RentNft = ({ num }: { num?: number }) => {
   let nft = Nft1
   if (num === 2) nft = Nft2
   if (num === 3) nft = Nft3
   if (num === 4) nft = Nft4
   if (num === 5) nft = Nft5
+
+
   return <>
     <div className="full-img-container">
       <img src={nft} alt="nft" className={"top-border"} />
@@ -24,8 +27,13 @@ export const NftCell = ({ num }: { num?: number }) => {
         </p>
 
         <div className="d-flex y-center">
-          <p className="author dot-icon opacity100">
-            7:3 Revenue Share
+          <div className="mr24">
+            <p className="author change-icon gray-icon opacity100">
+              7:3 Revenue Share
+            </p>
+          </div>
+          <p className="date date-icon opacity100">
+            12 Days
           </p>
         </div>
       </div>
@@ -42,13 +50,8 @@ export const NftCell = ({ num }: { num?: number }) => {
           </div>
         </div>
 
-        <div className="price-button">
-          <div className="mr0">
-            <img src={Eth} alt="eth" />
-          </div>
-          <p className="price-text">0.321</p>
-          <p className="price-unit">ETH</p>
-        </div>
+        <CommonButton text={"rent"} containerClass={"middle"} />
       </div>
-    </div></>
+    </div>
+  </>
 }

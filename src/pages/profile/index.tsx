@@ -31,11 +31,14 @@ export const Profile = () => {
           </p>
         </div>
 
-        <div className="edit-button mb40">
-          <p className="menu-title bold">
-            Edit Profile
-          </p>
+        <div className="tc">
+          <div className="edit-button mb40">
+            <p className="menu-title bold">
+              Edit Profile
+            </p>
+          </div>
         </div>
+
 
         <div className="cnt-container mb40">
           <p>
