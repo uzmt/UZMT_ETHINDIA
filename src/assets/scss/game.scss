@@ -1,13 +1,120 @@
 .game-container {
   background-color: black;
+  padding: 16px 24px;
 }
+
+.game-head {
+  display: flex;
+  flex-direction: row;
+  h2 {color: #FFFFFF;}
+  img {
+    width: 32px;
+    height: 32px;
+    margin-left: 12px;
+  }
+}
+.game-banner {
+  display: float;
+  position: relative;
+  flex-direction: column;
+  text-align: center;
+
+
+  .head {
+    left: 50%;
+    top: 80px;
+    transform: translate(-50%, -50%); 
+    position: absolute;
+    font-size: 32px;
+    line-height: 36px;
+    z-index: 10;
+  }  
+
+  .middle {
+    left: 50%;
+    top: 108px;
+    transform: translate(-50%, -50%); 
+    position: absolute;
+    font-size: 12px;
+    line-height: 18px;
+    z-index: 10;
+
+  }
+
+  .game-play {
+    padding: 8px 16px;
+    top: 287px;
+    left: calc(50% - 50px);
+    transform: translate(-50%, -50%); 
+    position: absolute;
+    z-index: 20;
+    background: #3772FF;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    /* identical to box height, or 186% */
+
+    letter-spacing: -0.04em;
+
+    color: #FFFFFF;
+    cursor: pointer;
+
+
+  }
+
+  .game-view {
+    padding: 8px 16px;
+    top: 287px;
+    left: calc(50% + 50px);
+    transform: translate(-50%, -50%); 
+    position: absolute;
+    z-index: 20;
+  
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 12px;
+
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    /* identical to box height, or 186% */
+
+    letter-spacing: -0.04em;
+
+    color: #FFFFFF;
+    cursor: pointer;
+
+
+  }
+
+
+  img {
+    width: 342px;
+    height: 335px;
+    margin: 20px auto 58px auto;
+    z-index: 2;
+  }
+
+
+}
+
+
+
 
 .game-list {
   margin-top: 15px;
   @extend %flex-center;
   flex-wrap: wrap;
-  padding-left: 31px;
-  padding-right: 31px;
   padding-bottom: 30px;
 
   .game-item {
@@ -72,3 +179,86 @@
     }
   }
 }
+
+.all-games {
+  h2{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 36px;
+    /* identical to box height, or 120% */
+
+    letter-spacing: -0.04em;
+
+    color: #FFFFFF;
+
+  }
+}
+
+.game-card-container {
+  display: flex;
+  flex-direction: column;
+
+  img {
+   border-radius: 24px 24px 0px 0px; 
+  }
+
+
+  .game-play {
+    padding: 8px 16px;
+    z-index: 20;
+    background: #3772FF;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    /* identical to box height, or 186% */
+
+    letter-spacing: -0.04em;
+
+    color: #FFFFFF;
+    cursor: pointer;
+
+
+  }
+}
+
+.game-card-info {
+  border-radius: 0px 0px 24px 24px;
+  background: #1F1F1F;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .project-title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 80.9%;
+  }
+
+  .nft-nums {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 80.9%;
+    /* identical to box height, or 9px */
+
+
+    color: #FFFFFF;
+
+    opacity: 0.7;
+  }
+}
+
+

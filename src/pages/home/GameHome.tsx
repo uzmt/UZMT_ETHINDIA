@@ -7,136 +7,95 @@ import Game3 from "assets/img/game3.png"
 import Game4 from "assets/img/game4.png"
 import Game5 from "assets/img/game5.png"
 import Game6 from "assets/img/game6.png"
+import AxieInfinity from "assets/img/AxieInfinity.png"
+import AxieProfile from "assets/img/AxieProfile.png"
+import ITSBLOC from "assets/img/ITSBLOC.png"
+import ITSBLOCProfile from "assets/img/ITSBLOC_Profile.png"
+import SPLINTERLAND from "assets/img/SplinterLands.png"
+import SPLINTERLANDProfile from "assets/img/SplinterLands_Profile.png"
+import GodsUnchained from "assets/img/GodsUnchained.png"
+import GodsUnchainedProfile from "assets/img/GodsUnchaind_Profile.png"
+import HighLight from "assets/img/Contour.png"
+import GameHomeBanner from "assets/img/Game_Home_Banner.png"
 import { Link } from "react-router-dom"
+import { ViewButton } from "components/common/ViewButton"
+import { GameCard } from "components/game/GameCard"
+
+const Games = [
+  {
+    mainImg: AxieInfinity,
+    profileImg: AxieProfile,
+    projectTitle: "Axie Infinity",
+    nftNum: "3214",
+    to: "/",
+  },
+  {
+    mainImg: ITSBLOC,
+    profileImg: ITSBLOCProfile,
+    projectTitle: "ITSBLOC",
+    nftNum: "3214",
+    to: "/",
+  },
+  {
+    mainImg: SPLINTERLAND,
+    profileImg: SPLINTERLANDProfile,
+    projectTitle: "SplinterLands",
+    nftNum: "3214",
+    to: "/",
+  },
+  {
+    mainImg: GodsUnchained,
+    profileImg: GodsUnchainedProfile,
+    projectTitle: "Gods Unchained",
+    nftNum: "3214",
+    to: "/",
+  },
+  
+
+]
 
 export const GameHome = () => {
-  return <div className="app game-container">
-    <div className="home-tab-container">
-      <Link to="/">
-        <img src={Logo} alt="logo" />
-      </Link>
-      <p className="title no-margin">
-        All Games
-      </p>
-      <div className="bell-container">
-        <img src={Bell} alt="bell" />
-      </div>
-    </div>
-
-    <div className="game-img">
-      <img src={GameImg} alt="game" />
-    </div>
-
-    <div className="game-list">
-      <div className="game-item">
-        <div className="game-profile">
-          <img src={Game1} alt="" />
-        </div>
-
-        <Link to="/gameDetail">
-          <div className="game-button">
-            <p>Purchase / RENT</p>
-          </div>
-        </Link>
-
-        <Link to="/gameDetail">
-          <div className="game-button">
-            <p>Play now</p>
-          </div>
-        </Link>
-
-      </div>
-
-      <div className="game-item">
-        <div className="game-profile">
-          <img src={Game2} alt="" />
-        </div>
-
-        <Link to="/gameDetail">
-          <div className="game-button">
-            <p>Purchase / RENT</p>
-          </div>
-        </Link>
-
-        <Link to="/gameDetail">
-          <div className="game-button">
-            <p>Play now</p>
-          </div>
-        </Link>
-      </div>
-
-      <div className="game-item">
-        <div className="game-profile">
-          <img src={Game3} alt="" />
-        </div>
-
-        <Link to="/gameDetail">
-          <div className="game-button">
-            <p>Purchase / RENT</p>
-          </div>
-        </Link>
-
-        <Link to="/gameDetail">
-          <div className="game-button">
-            <p>Play now</p>
-          </div>
-        </Link>
-      </div>
-
-      <div className="game-item">
-        <div className="game-profile">
-          <img src={Game4} alt="" />
-        </div>
-
-        <Link to="/gameDetail">
-          <div className="game-button">
-            <p>Purchase / RENT</p>
-          </div>
-        </Link>
-
-        <Link to="/gameDetail">
-          <div className="game-button">
-            <p>Play now</p>
-          </div>
-        </Link>
-      </div>
-
-      <div className="game-item">
-        <div className="game-profile">
-          <img src={Game5} alt="" />
-        </div>
-
-        <Link to="/gameDetail">
-          <div className="game-button">
-            <p>Purchase / RENT</p>
-          </div>
-        </Link>
-
-        <Link to="/gameDetail">
-          <div className="game-button">
-            <p>Play now</p>
-          </div>
-        </Link>
-      </div>
-
-      <div className="game-item">
-        <div className="game-profile">
-          <img src={Game6} alt="" />
-        </div>
-
-        <Link to="/gameDetail">
-          <div className="game-button">
-            <p>Purchase / RENT</p>
-          </div>
-        </Link>
-
-        <Link to="/gameDetail">
-          <div className="game-button">
-            <p>Play now</p>
-          </div>
-        </Link>
-      </div>
-
+  return (
+    <>
+    <div className="app home-tab-container">
+    <Link to="/">
+      <img src={Logo} alt="logo" />
+    </Link>
+    <p className="title no-margin">
+      
+    </p>
+    <div className="bell-container">
+      <img src={Bell} alt="bell" />
     </div>
   </div>
+  <div className="app game-container">
+
+
+    <div className="game-head">
+      <h2>Highlight</h2>
+      <img src={HighLight} alt="highlight" />
+    </div>
+
+    <div className="game-banner">
+    <img src={GameHomeBanner} alt="gamehome" />
+      <button className="game-play">Play now</button>
+      <button className="game-view">View more</button>
+
+      <p className="head">UZMT</p>
+      <p className="middle">Let's be the king of mining!</p>
+    </div>
+
+    <div className="all-games">
+      <h2 className="mb20">All Games</h2>
+      {
+        Games.map((Game) => (
+          <GameCard mainImg={Game.mainImg} profileImg={Game.profileImg} projectTitle={Game.projectTitle} nftNum={Game.nftNum} to={Game.to} />
+        ))
+      }
+    </div>
+    
+
+  </div>
+  </>
+  )
 }
