@@ -109,12 +109,18 @@
   }
 
   &.small {
-    left: 12px;
-    width: calc(100% - 24px);
+    left: 8px;
+    width: calc(100% - 16px);
+    bottom: 8px;
+  }
+
+  &.blur {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(16px);
   }
 
   .img-top-info {
-    padding-bottom: 4px;
+    padding-bottom: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
 
