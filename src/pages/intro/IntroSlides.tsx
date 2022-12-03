@@ -1,38 +1,37 @@
 import Slide1 from 'assets/img/slide-step1.png';
 import Slide2 from 'assets/img/slide-step2.png';
 import Slide3 from 'assets/img/slide-step3.png';
-import Slide4 from 'assets/img/slide-step4.png';
 import CircleArr from 'assets/img/right-circle-arrow.svg';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const steps = [
   {
-    title: `Connect your
-    Wallet.`,
-    description: `Connect a wallet with NFT to mint. UZUMETA supports several wallets.`,
+    title: `Choose the game 
+    you want`,
+    description: `Run the game or rent the items you need for the game`,
     image: Slide1,
     curTitle: `Connect wallet`,
   },
   {
-    title: `Upload your 
-    NFT Rent Ticket.`,
-    description: `Connect a wallet with NFT to mint. UZUMETA supports several wallets.`,
+    title: `Select the NFT
+    required for the game`,
+    description: `NFT rental is available for a period of time and shares revenue generated from the game with the NFT owner.`,
     image: Slide2,
     curTitle: `Uplaod NFT`,
   },
   {
-    title: `Sell your NFT
-    Rent Ticket.`,
-    description: `Connect a wallet with NFT to mint. UZUMETA supports several wallets.`,
+    title: `Check out rental list
+    in your profile`,
+    description: `You can see the rental list or the page where you can apply for a rental.`,
     image: Slide3,
     curTitle: `Sell Ticket`,
   },
   {
-    title: `Settlement your
-    Ticket price.`,
-    description: `Connect a wallet with NFT to mint. UZUMETA supports several wallets.`,
-    image: Slide4,
+    title: `Shall we enjoy 
+    the game now?`,
+    description: `You can enjoy the game without any burden of money.`,
+    image: '',
     curTitle: `Settlement`,
   },
 ];

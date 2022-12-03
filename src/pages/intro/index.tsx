@@ -1,100 +1,209 @@
 import IntroText from 'assets/img/intro-text.png';
-import UZUMETA1 from 'assets/img/uzumeta1.png';
-import UZUMETA2 from 'assets/img/uzumeta2.png';
-import UZUMETA3 from 'assets/img/uzumeta3.png';
-import UZUMETA4 from 'assets/img/uzumeta4.png';
-import Profile from 'assets/img/profile.png';
-import Profile2 from 'assets/img/profile2.png';
-import CARD1 from 'assets/img/card1.png';
-import CARD2 from 'assets/img/card2.png';
-import CARD3 from 'assets/img/card3.png';
-import IntroFloating1 from 'assets/img/intro_floating1.png';
-import IntroFloating2 from 'assets/img/intro_floating2.png';
-import IntroFloating3 from 'assets/img/intro_floating3.png';
+import NFT1 from 'assets/img/intro/nfts/nft1.png';
+import NFT2 from 'assets/img/intro/nfts/nft2.png';
+import NFT3 from 'assets/img/intro/nfts/nft3.png';
+import NFT4 from 'assets/img/intro/nfts/nft4.png';
+import NFT5 from 'assets/img/intro/nfts/nft5.png';
+import NFT6 from 'assets/img/intro/nfts/nft6.png';
+import NFT7 from 'assets/img/intro/nfts/nft7.png';
+import NFT8 from 'assets/img/intro/nfts/nft8.png';
+import NFT9 from 'assets/img/intro/nfts/nft9.png';
+import Profile1 from 'assets/img/intro/profile/owner1.png';
+import Game1 from 'assets/img/intro/games/game1.png';
+import Game2 from 'assets/img/intro/games/game2.png';
+import Game3 from 'assets/img/intro/games/game3.png';
+import GameSymbol1 from 'assets/img/intro/game_symbols/game1.png';
+import GameSymbol2 from 'assets/img/intro/game_symbols/game2.png';
+import GameSymbol3 from 'assets/img/intro/game_symbols/game3.png';
 import Logo from 'assets/img/logo.svg';
 import LogoW from 'assets/img/logo_w.svg';
 import { LaunchButton } from 'components/common/LaunchButton';
 import { Link } from 'react-router-dom';
-import { IntroCard } from './IntroCard';
 import { IntroSlides } from './IntroSlides';
 import '../../assets/scss/intro-temp.scss';
-import { IntroCard2 } from './IntroCard2';
 import ArrB from 'assets/img/arrow-right-black.svg';
 import { IntroManagers } from './IntroManagers';
+import { IntroGame } from './IntroGame';
+import { IntroCard3 } from './IntroCard3';
+import { IntroGame2 } from './IntroGame2';
 
-const items = [
+const nftCards = [
   {
-    src: UZUMETA1,
-    title: 'Darkness',
-    platform: 'Yu-Gi-Yn',
-    date: '2022.11.31 ~ 2022.12.05',
-    profile_image: Profile,
-    profile_name: 'Mariey Stanton',
-    profile_rent: 23201,
-    amount: 0.521,
+    id: 1,
+    name: 'Axie #35121',
+    platform: 'Axie Infinity',
+    item_image: NFT1,
+    profile_image: Profile1,
+    owner_name: 'Salvador',
+    rent: 23201,
   },
   {
-    src: UZUMETA2,
-    title: 'Rent my Axies',
-    platform: 'AXIE Infinity',
-    date: '2022.11.31 ~ 2022.12.05',
-    profile_image: Profile,
-    profile_name: 'Chance Mango',
-    profile_rent: 23201,
-    amount: 0.521,
+    id: 2,
+    name: 'ITSB #23144',
+    platform: 'ITSBLOC',
+    item_image: NFT2,
+    profile_image: Profile1,
+    owner_name: 'Salvador',
+    rent: 23201,
   },
   {
-    src: UZUMETA3,
-    title: 'It\'s over 9000',
-    platform: 'Decentraland Wearables',
-    date: '2022.11.31 ~ 2022.12.05',
-    profile_image: Profile,
-    profile_name: 'Marilyn Curtis',
-    profile_rent: 23201,
-    amount: 0.521,
+    id: 3,
+    name: 'king #59153',
+    platform: 'Mining King',
+    item_image: NFT3,
+    profile_image: Profile1,
+    owner_name: 'Salvador',
+    rent: 23201,
   },
   {
-    src: UZUMETA4,
-    title: 'Darkness',
-    platform: 'Sandbox',
-    date: '2022.11.31 ~ 2022.12.05',
-    profile_image: Profile,
-    profile_name: 'Alfonso Bergson',
-    profile_rent: 23201,
-    amount: 0.521,
+    id: 4,
+    name: 'king #12112',
+    platform: 'Mining King',
+    item_image: NFT4,
+    profile_image: Profile1,
+    owner_name: 'Salvador',
+    rent: 23201,
   },
 ];
 
-const items2 = [
+const games = [
   {
-    src: CARD1,
-    title: 'Darkness',
-    platform: 'Yu-Gi-Yn',
-    date: '2022.11.31 ~ 2022.12.05',
-    profile_image: Profile2,
-    profile_name: 'Adison Saris',
-    profile_rent: 23201,
-    amount: 0.521,
+    name: 'Mining King',
+    nfts: 3214,
+    game_image: Game1,
+    play_link: '',
+    rent_link: '',
+    cards: [
+      {
+        id: 1,
+        name: 'king #59153',
+        platform: 'Mining King',
+        item_image: NFT3,
+        profile_image: Profile1,
+        owner_name: 'Salvador',
+        rent: 23201,
+      },
+      {
+        id: 2,
+        name: 'king #12112',
+        platform: 'Mining King',
+        item_image: NFT4,
+        profile_image: Profile1,
+        owner_name: 'Salvador',
+        rent: 23201,
+      },
+      {
+        id: 3,
+        name: 'king #59153',
+        platform: 'Mining King',
+        item_image: NFT5,
+        profile_image: Profile1,
+        owner_name: 'Salvador',
+        rent: 23201,
+      },
+    ],
   },
   {
-    src: CARD2,
-    title: 'My Axie...is angry!',
+    name: 'ITSBLOC',
+    nfts: 3214,
+    game_image: Game2,
+    play_link: '',
+    rent_link: '',
+    cards: [
+      {
+        id: 1,
+        name: 'ITSB #23144',
+        platform: 'ITSBLOC',
+        item_image: NFT6,
+        profile_image: Profile1,
+        owner_name: 'Salvador',
+        rent: 23201,
+      },
+      {
+        id: 2,
+        name: 'ITSB #23144',
+        platform: 'ITSBLOC',
+        item_image: NFT2,
+        profile_image: Profile1,
+        owner_name: 'Salvador',
+        rent: 23201,
+      },
+      {
+        id: 3,
+        name: 'ITSB #59153',
+        platform: 'ITSBLOC',
+        item_image: NFT7,
+        profile_image: Profile1,
+        owner_name: 'Salvador',
+        rent: 23201,
+      },
+    ],
+  },
+  {
+    name: 'Axie Infinity',
+    nfts: 3214,
+    game_image: Game3,
+    play_link: '',
+    rent_link: '',
+    cards: [
+      {
+        id: 1,
+        name: 'Axie #35786',
+        platform: 'Axie Infinity',
+        item_image: NFT8,
+        profile_image: Profile1,
+        owner_name: 'Salvador',
+        rent: 23201,
+      },
+      {
+        id: 2,
+        name: 'Axie #35781',
+        platform: 'Axie Infinity',
+        item_image: NFT9,
+        profile_image: Profile1,
+        owner_name: 'Salvador',
+        rent: 23201,
+      },
+      {
+        id: 3,
+        name: 'Axie #35121',
+        platform: 'Axie Infinity',
+        item_image: NFT1,
+        profile_image: Profile1,
+        owner_name: 'Salvador',
+        rent: 23201,
+      },
+    ],
+  },
+];
+
+const games2 = [
+  {
+    description: 'Let’s be the king of mining!',
+    platform: 'Mining King',
+    nfts: 3214,
+    game_image: Game1,
+    play_link: '',
+    rent_link: '',
+    game_symbol: GameSymbol1,
+  },
+  {
+    description: 'Break from the popular CVC contests.',
+    platform: 'ITSBLOC',
+    nfts: 3214,
+    game_image: Game2,
+    play_link: '',
+    rent_link: '',
+    game_symbol: GameSymbol2,
+  },
+  {
+    description: 'Adventure, Arena Battle, and Breeding.',
     platform: 'Axie Infinity',
-    date: '2022.11.31 ~ 2022.12.05',
-    profile_image: Profile2,
-    profile_name: 'Terry Westervelt',
-    profile_rent: 23201,
-    amount: 0.521,
-  },
-  {
-    src: CARD3,
-    title: 'SuperLens',
-    platform: 'Decentraland Wearables',
-    date: '2022.11.31 ~ 2022.12.05',
-    profile_image: Profile2,
-    profile_name: 'Adison Philips',
-    profile_rent: 23201,
-    amount: 0.521,
+    nfts: 3214,
+    game_image: Game3,
+    play_link: '',
+    rent_link: '',
+    game_symbol: GameSymbol3,
   },
 ];
 
@@ -147,56 +256,41 @@ export const Intro = () => {
           <img src={IntroText} alt="intro-text" />
         </div>
 
-        <div className="intro-description-container">
-          <p>
-            Web3 Game is a new trend for
-            <br />
-            making passive income
-            <br />
-            Wanna Experience?
-            <br />
-            Take this And Rent That.
-          </p>
-
-          <div className="d-flex y-center LaunchButton">
-            <LaunchButton />
-          </div>
-        </div>
-
-        <div className="floating-container">
-          <img src={IntroFloating1} alt="" />
-          <img src={IntroFloating2} alt="" />
-          <img src={IntroFloating3} alt="" />
+        <div className="intro-head-cards">
+          {nftCards.map((nftCard, index) => (
+            <IntroCard3 key={index} item={nftCard} />
+          ))}
         </div>
       </div>
 
       <div className="intro-uzumeta">
         <h2>
-          Here. This is
+          NFT Rental Platform
           <br />
-          UZUMETA.
+          UZUMETA
         </h2>
 
         <div className="desc">
-          UZUMETA is a rental platform for the scholarship
+          Playing games on the blockchain can be profitable, but often requires significant upfront
           <br />
-          program of web3 games. We help users start web3
+          investment. UZMT is a GameFi platform where scholarship programs and lending
           <br />
-          games much more easily.
+          mechanisms are very easy and useful.
         </div>
-
-        <div className="d-grid">
-          {items.map((item, index) => (
-            <IntroCard key={index} item={item} />
+      </div>
+      <div className="uzumeta-cards">
+        <div className="games">
+          {games.map((game, index) => (
+            <IntroGame item={game} />
           ))}
         </div>
       </div>
 
       <div className="experience">
         <h2>
-          Experience
+          Try a game without buying a NFT
           <br />
-          Web3 Game
+          with easy and simple steps
         </h2>
         <div className="desc">
           Just follow 4 steps to rent NFTs to play the web3 games.
@@ -213,12 +307,12 @@ export const Intro = () => {
         <div className="rent-container">
           <h2>Start Rent Today</h2>
           <div className="desc">
-            <div className='point point1'></div>
-            <div className='point point2'></div>
-            <div className='point point3'></div>
-            <div className='point point4'></div>
-            <div className='point point5'></div>
-            <div className='point point6'></div>
+            <div className="point point1"></div>
+            <div className="point point2"></div>
+            <div className="point point3"></div>
+            <div className="point point4"></div>
+            <div className="point point5"></div>
+            <div className="point point6"></div>
             In some countries, it was so expensive to start web3 games. However, our
             <br />
             rental protocol breaks the obstacles to play and earn! Just Play It after
@@ -234,7 +328,7 @@ export const Intro = () => {
       <div className="top3">
         <div className="top3-container">
           <h2>
-            <b>Top3</b> Rent Tickets
+            <b>Top3</b> GAME
           </h2>
           <div className="desc">
             Weekly Top3 Rent Items UZUMETA selects weekly top3 rent items for you!
@@ -242,9 +336,9 @@ export const Intro = () => {
             Take this, And Play the game 🤩
           </div>
 
-          <div className="cardbox">
-            {items2.map((item, index) => (
-              <IntroCard2 key={index} item={item} />
+          <div className="top3-cards">
+            {games2.map((game, index) => (
+              <IntroGame2 key={index} item={game} />
             ))}
           </div>
 
@@ -261,7 +355,7 @@ export const Intro = () => {
       <div className="best">
         <div className="best-container">
           <h2>
-            <span>Best</span> Managers
+            <span>Best</span> Lender
           </h2>
           <div className="desc">
             Do you want to work together with a great manager?
