@@ -5,12 +5,15 @@ import DetailImg from "assets/img/detail-img.png"
 import Arrow from "assets/img/Arrow_icon.png"
 import Whole from "assets/img/whole_icon.png"
 import Avatar from "assets/img/Avatar_icon.png"
-import { useState } from "react"
 import { TabMint } from "components/home/TabMint"
 import { TabRent } from "components/home/TabRent"
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
-
+import { useState, useEffect } from "react"
+import ABI from '../../utils/abi.json'
+import {client, getProfiles, recommendProfiles} from '../../utils/api';
+import {id} from '../../utils/id';
+const address = "0xDb46d1Dc155634FbC732f92E853b10B288AD5a1d";
 
 
 
@@ -20,8 +23,28 @@ export const GameDetail = () => {
   const { connect } = useConnect({
     connector: new InjectedConnector(),
   })
-
+  const [profile, setProfile] = useState()
   const [tab, setTab] = useState<"MINT" | "RENT">("RENT")
+
+  useEffect(() => {
+    if (id) {
+        fetchProfile()
+    }
+
+}, [id])
+
+  async function fetchProfile() {
+    try {
+        
+        const response = await client.query(getProfiles, { id }).toPromise()
+        
+        setProfile(response.data.profiles.items[0]);
+
+    } catch (err) {
+        console.log(err);
+    }
+  }
+
   return (
     <>
     <div className="app home-tab-container">
@@ -32,9 +55,15 @@ export const GameDetail = () => {
       {
             isConnected ? (
               <div>
-                <Link to="/profile">
-                  <img src={Avatar} className="avatar"/>
-                </Link>
+                {
+                  profile ? (
+                    <Link to="/profile">
+                    <img src={profile.picture.original.url} className="avatar"/>
+                  </Link>
+                  ):(
+                    <div style={{ width: "200px", height: "200px", backgroundColor: 'black' }} />
+                  )
+                }
               </div>
             ) : (
               <div className="d-flex row y-center">
@@ -52,7 +81,7 @@ export const GameDetail = () => {
 
     <div className="game-img">
       <div className="img-title">
-        <h2 className="big mb10">UZMT</h2>
+        <h2 className="big mb10">MINER</h2>
         <p className="h2-desc">1 Items</p>
       </div>
       <div className="dim"></div>

@@ -17,7 +17,7 @@ export const NftTabDetail = () => {
           </div>
           <div>
             <p className="content-title">
-              UZMT
+              MINER
             </p>
             <p>
               NFT

@@ -218,11 +218,11 @@ const menus = [
   },
   {
     link: '',
-    name: 'Best Sellers',
+    name: 'Best Managers',
   },
   {
     link: '',
-    name: 'Top 3 Ticket',
+    name: 'Top 3 GAME',
   },
 ];
 
@@ -273,7 +273,7 @@ export const Intro = () => {
         <div className="desc">
           Playing games on the blockchain can be profitable, but often requires significant upfront
           <br />
-          investment. UZMT is a GameFi platform where scholarship programs and lending
+          investment. UZMT is a GameFi platform where scholarship programs and Rental
           <br />
           mechanisms are very easy and useful.
         </div>
