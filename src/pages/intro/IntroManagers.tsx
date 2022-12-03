@@ -30,7 +30,7 @@ export const IntroManagers = ({ items = default_items }) => {
           </div>
           <div className="manager-card-profile-info">
             <h4>{manager.name}</h4>
-            <p>{manager.rent} Rent Tickets</p>
+            <p>{manager.rent} NFTs Rented</p>
           </div>
         </div>
       ))}
@@ -41,7 +41,7 @@ export const IntroManagers = ({ items = default_items }) => {
           </div>
           <div className="manager-card-profile-info">
             <h4>{manager.name}</h4>
-            <p>{manager.rent} Rent Tickets</p>
+            <p>{manager.rent} NFTs Rented</p>
           </div>
         </div>
       ))}
