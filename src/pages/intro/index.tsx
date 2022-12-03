@@ -15,6 +15,15 @@ import Game3 from 'assets/img/intro/games/game3.png';
 import GameSymbol1 from 'assets/img/intro/game_symbols/game1.png';
 import GameSymbol2 from 'assets/img/intro/game_symbols/game2.png';
 import GameSymbol3 from 'assets/img/intro/game_symbols/game3.png';
+import Lender1 from 'assets/img/intro/lenders/lender1.png';
+import Lender2 from 'assets/img/intro/lenders/lender2.png';
+import Lender3 from 'assets/img/intro/lenders/lender3.png';
+import Lender4 from 'assets/img/intro/lenders/lender4.png';
+import Lender5 from 'assets/img/intro/lenders/lender5.png';
+import Lender6 from 'assets/img/intro/lenders/lender6.png';
+import Lender7 from 'assets/img/intro/lenders/lender7.png';
+import Lender8 from 'assets/img/intro/lenders/lender8.png';
+import Lender9 from 'assets/img/intro/lenders/lender9.png';
 import Logo from 'assets/img/logo.svg';
 import LogoW from 'assets/img/logo_w.svg';
 import { LaunchButton } from 'components/common/LaunchButton';
@@ -226,6 +235,75 @@ const menus = [
   },
 ];
 
+const lenders1 = [
+  {
+    profile_image: Lender1,
+    name: 'Wilson',
+    rent: 23201,
+  },
+  {
+    profile_image: Lender2,
+    name: 'Jakob',
+    rent: 23201,
+  },
+  {
+    profile_image: Lender3,
+    name: 'Aspen',
+    rent: 23201,
+  },
+  {
+    profile_image: Lender4,
+    name: 'Roger',
+    rent: 23201,
+  },
+];
+
+const lenders2 = [
+  {
+    profile_image: Lender5,
+    name: 'Justin',
+    rent: 23201,
+  },
+  {
+    profile_image: Lender6,
+    name: 'Tatiana',
+    rent: 23201,
+  },
+  {
+    profile_image: Lender7,
+    name: 'Ann',
+    rent: 23201,
+  },
+  {
+    profile_image: Lender8,
+    name: 'Talan',
+    rent: 23201,
+  },
+];
+
+const lenders3 = [
+  {
+    profile_image: Lender9,
+    name: 'Phillip',
+    rent: 23201,
+  },
+  {
+    profile_image: Lender4,
+    name: 'Alfonso',
+    rent: 23201,
+  },
+  {
+    profile_image: Lender1,
+    name: 'Ryan',
+    rent: 23201,
+  },
+  {
+    profile_image: Lender5,
+    name: 'Ruben',
+    rent: 23201,
+  },
+];
+
 export const Intro = () => {
   return (
     <>
@@ -364,9 +442,9 @@ export const Intro = () => {
           </div>
 
           <div className="flow-managers">
-            <IntroManagers />
-            <IntroManagers />
-            <IntroManagers />
+            <IntroManagers items={lenders1} />
+            <IntroManagers items={lenders2} />
+            <IntroManagers items={lenders3} />
           </div>
         </div>
       </div>
