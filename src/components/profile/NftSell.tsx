@@ -17,10 +17,10 @@ export const NftCell = ({ num }: { num?: number }) => {
     <div className="mb4">
       <img src={nft} alt="" />
     </div>
-    <div className="img-detail full">
+    <div className="img-detail my-nft ">
       <div className="top-desc light">
         <p className="title ">
-          Darkness
+        Pick AXE
         </p>
 
         <div className="author-container">
@@ -38,7 +38,7 @@ export const NftCell = ({ num }: { num?: number }) => {
         </div>
         <div className="d-flex x-center y-center">
           <Link to="/connect">
-          <CommonButton text={"Make Rental"} containerClass={"middle mr12"} />
+          <CommonButton text={"List Rental Item"} containerClass={"middle mr12"} />
           </Link>
         </div>
       </div>

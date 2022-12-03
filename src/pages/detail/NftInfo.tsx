@@ -55,10 +55,10 @@ export const NftInfo = () => {
       </div>
 
 
-      <div className="pl24 pr24">
+      <div className="pl42 pr42">
         <div className="over-view">
           <p className="content-title mb12">
-            Ticket overview
+            Description
           </p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...

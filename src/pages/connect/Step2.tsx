@@ -1,4 +1,4 @@
-import Main from "assets/img/main-img.png"
+import nft0 from "assets/img/nft0.png"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { CommonButton } from "components/common/CommonButton"
@@ -10,38 +10,34 @@ export const Step2 = () => {
 
   return <>
     <div className="mb36">
-      <p className="opacity3 color-black tl">
-        Lending Step 02
+      <p className="opacity3 color-white tl">
+      Rental Step 01
       </p>
-      <h3 className="color-black tl">
+      <h3 className="color-white tl">
         Check the <br />
-        Lent information.
+        Rental information.
       </h3>
     </div>
 
     <div className="mb15">
-      <img src={Main} alt="main" />
+      <img src={nft0} alt="main" />
 
       <div className="top-desc">
-        <p className="title color-black">
-          Darkness
+        <p className="title color-white">
+        Pick AXE
         </p>
 
         <div className="d-flex y-center">
           <div className="mr24">
-            <p className="author dot-icon color-black">
-              Yu-Gi-Yn
+            <p className="author dot-icon color-white">
+              70:30 Revenue Share
             </p>
           </div>
-          <p className="date date-icon color-black">2022. 11. 31 ~ 2022. 12. 05</p>
+          <p className="date date-icon color-white">12 days</p>
         </div>
       </div>
 
       <div className={`button-button`}>
-        <div className="price-info eth">
-          <p className="price-text color-black mr4">0.321</p>
-          <p className="price-unit color-black opacity5">ETH</p>
-        </div>
         <div className="d-flex x-center y-center">
           <CommonButton type="type2" text={"Share"} onClick={() => setShowQr(!showQr)} containerClass={"middle"} />
         </div>
@@ -49,8 +45,7 @@ export const Step2 = () => {
     </div>
 
     <div className="d-flex">
-      <CommonButton text="Edit" containerClass="flex1 black mr8" />
-      <CommonButton text="Rent" containerClass="flex2" onClick={() => navigate("/home")} />
+      <CommonButton text="Edit" type="type2" containerClass="flex1 white mb15" />
     </div>
   </>
 }

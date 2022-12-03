@@ -12,7 +12,10 @@ import { useAccount, useConnect, useDisconnect } from 'wagmi'
 import { InjectedConnector } from 'wagmi/connectors/injected'
 
 
+
+
 export const GameDetail = () => {
+
   const { address, isConnected } = useAccount()
   const { connect } = useConnect({
     connector: new InjectedConnector(),
@@ -58,6 +61,7 @@ export const GameDetail = () => {
     </div>
 
     <div className="game-tap mb20">
+      
       <div className={`tab ${tab === "RENT" ? "active" : ""}`} onClick={() => setTab("RENT")}>
         <p>RENT</p>
       </div>
