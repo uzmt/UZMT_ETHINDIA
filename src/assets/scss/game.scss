@@ -41,10 +41,10 @@
 
   }
 
-  .game-play {
+  .game-view {
     padding: 8px 16px;
     top: 287px;
-    left: calc(50% - 50px);
+    left: calc(50% + 50px);
     transform: translate(-50%, -50%); 
     position: absolute;
     z-index: 20;
@@ -67,10 +67,10 @@
 
   }
 
-  .game-view {
+  .game-play {
     padding: 8px 16px;
     top: 287px;
-    left: calc(50% + 50px);
+    left: calc(50% - 50px);
     transform: translate(-50%, -50%); 
     position: absolute;
     z-index: 20;
@@ -212,7 +212,7 @@
   }
 
 
-  .game-play {
+  .game-view {
     padding: 8px 16px;
     z-index: 20;
     background: #3772FF;
@@ -233,6 +233,34 @@
 
 
   }
+
+  .game-play {
+    padding: 8px 16px;
+    z-index: 20;
+  
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 12px;
+
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    /* identical to box height, or 186% */
+
+    letter-spacing: -0.04em;
+
+    color: #FFFFFF;
+    cursor: pointer;
+
+
+  }
+
+  
 }
 
 .game-card-info {

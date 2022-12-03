@@ -4,9 +4,9 @@ import { Connect } from 'pages/connect';
 import { GameDetail } from 'pages/home/GameDetail';
 import { GameHome } from 'pages/home/GameHome';
 import { Profile } from 'pages/profile';
-import { Purchase } from 'pages/purchase';
-import { PurchaseComplete } from 'pages/purchase/PurchaseComplete';
-import { PurchaseLoading } from 'pages/purchase/PurchaseLoading';
+import { Rent } from 'pages/rent';
+import { RentComplete } from 'pages/rent/RentComplete';
+import { RentLoading } from 'pages/rent/RentLoading';
 import { Route, Routes } from 'react-router-dom';
 import { NftInfo } from '../pages/detail/NftInfo';
 import { Home } from '../pages/home';
@@ -22,9 +22,9 @@ export default function Routers() {
         <Route path="/home" element={<Home />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/detail" element={<NftInfo />} />
-        <Route path="/purchase" element={<Purchase />} />
-        <Route path="/purchaseLoading" element={<PurchaseLoading />} />
-        <Route path="/purchaseComplete" element={<PurchaseComplete />} />
+        <Route path="/rent" element={<Rent />} />
+        <Route path="/rentLoading" element={<RentLoading />} />
+        <Route path="/rentComplete" element={<RentComplete />} />
         <Route path="/room" element={<Room />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/connect" element={<Connect />} />

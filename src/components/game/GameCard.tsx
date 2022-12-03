@@ -17,9 +17,15 @@ export const GameCard = ({mainImg, profileImg, projectTitle, nftNum, to}: {mainI
                                 <p className="nft-nums">{nftNum.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")} NFTs</p>
                             </div>
                         </div>
-                        <Link to={to}>
-                        <button className="game-play">Play now</button>
-                        </Link>
+                        <div className="row">
+                            <Link to={to}>
+                            <button className="game-play mr6">Play now</button>
+                            </Link>
+                            <Link to={to}>
+                            <button className="game-view">Rent now</button>
+                            </Link>
+                        </div>
+                        
 
                     </div>
                 </div>

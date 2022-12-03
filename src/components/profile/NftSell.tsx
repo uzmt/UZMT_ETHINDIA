@@ -1,13 +1,14 @@
 import Eth from "assets/img/eth-b.svg"
-import Nft1 from "assets/img/nft1.png"
+import nft0 from "assets/img/nft0.png"
 import Nft2 from "assets/img/nft2.png"
 import Nft3 from "assets/img/nft3.png"
 import Nft4 from "assets/img/nft4.png"
 import Nft5 from "assets/img/nft5.png"
 import { CommonButton } from "components/common/CommonButton"
+import { Link } from "react-router-dom"
 
 export const NftCell = ({ num }: { num?: number }) => {
-  let nft = Nft1
+  let nft = nft0
   if (num === 2) nft = Nft2
   if (num === 3) nft = Nft3
   if (num === 4) nft = Nft4
@@ -34,15 +35,11 @@ export const NftCell = ({ num }: { num?: number }) => {
 
       <div className="d-flex x-eq">
         <div className="price-info">
-          <div className="mr4">
-            <img src={Eth} alt="" />
-          </div>
-          <p className="price-text mr4 ">0.321</p>
-          <p className="price-unit opacity5 ">ETH</p>
         </div>
         <div className="d-flex x-center y-center">
-          <CommonButton text={"RENT"} containerClass={"middle mr12"} />
-          <CommonButton type="type3" text={"NFT SELL"} containerClass={"middle"} />
+          <Link to="/connect">
+          <CommonButton text={"Make Rental"} containerClass={"middle mr12"} />
+          </Link>
         </div>
       </div>
 

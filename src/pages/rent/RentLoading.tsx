@@ -2,15 +2,15 @@ import { Header } from "components/common/Header"
 import Loading from "assets/img/loading.svg"
 import { Link } from "react-router-dom"
 
-export const PurchaseLoading = () => {
+export const RentLoading = () => {
 
   return <div className="app main">
-    <Header title={"Purchase"} hasBack />
-    <Link to="/purchaseComplete">
+    <Header title={"Rental"} hasBack />
+    <Link to="/rentComplete">
       <div className="loading-container">
         <img src={Loading} />
         <h3 className={"loading"}>
-          Purchase in <br />
+          Rental is <br />
           in progress...
         </h3>
       </div>

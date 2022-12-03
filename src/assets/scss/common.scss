@@ -187,7 +187,7 @@
   }
 }
 
-.buy-button {
+.rent-button {
   bottom: 50px;
   left: 0;
 
@@ -197,19 +197,17 @@
   height: 58px;
   padding: 16px;
 
-  @extend %flex-eq;
-  .left-buy-text {
+  .rent-title {
+    font-family: 'Poppins';
+    font-style: normal;
     font-weight: 700;
-    font-size: 12px;
+    font-size: 24px;
     line-height: 26px;
+    /* identical to box height, or 217% */
+
     letter-spacing: -0.04em;
 
-    color: #ffffff;
-  }
-
-  .right-buy-text {
-    display: flex;
-    align-items: center;
+    color: #FFFFFF;
   }
 }
 
@@ -218,14 +216,13 @@
   padding-right: 24px;
   margin-bottom: 22px;
   position: relative;
-
+  background:  #1F1F1F;
   &:last-child {
     margin-bottom: 0;
   }
 
   .img-detail {
-    width: calc(100% - 70px);
-    left: 35px;
+    width: 90%;
   }
 }
 
@@ -552,4 +549,64 @@ p.content-title {
 }
 
 
+.project-banner {
+  width: 310px;
+  height: 101px;
+  display: flex;
+  background: linear-gradient(197.67deg, rgba(76, 79, 186, 0.47) 0%, rgba(153, 255, 194, 0.47) 100%);
+  border-radius: 24px;
+  
+}
 
+.wallet-connect {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: -0.04em;
+
+  color: #FFFFFF;
+
+  opacity: 0.5;
+
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+
+
+
+.rent-button{
+    padding: 8px 16px;
+    z-index: 20;
+    background: #3772FF;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 12px;
+    p {
+      font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    /* identical to box height, or 186% */
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    }
+    
+
+
+
+
+    cursor: pointer;
+}

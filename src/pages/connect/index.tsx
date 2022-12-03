@@ -7,7 +7,7 @@ import { Step2 } from "./Step2"
 export const Connect = () => {
   const [step, setStep] = useState(0)
 
-  return <div>
+  return <div className="app">
     <Header title="Ticket Minting" hasBack theme={"light"} />
 
     <div className="content full">

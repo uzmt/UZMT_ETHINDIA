@@ -1,6 +1,6 @@
 import User from "assets/img/user.svg"
 import { Header } from "components/common/Header"
-import NftImg from "assets/img/nft-img-no-border.png"
+import nft0 from "assets/img/nft0.png"
 import { Link } from "react-router-dom"
 import { useState, useEffect } from "react"
 import User1 from "assets/img/user1.svg"
@@ -17,25 +17,25 @@ export const NftInfo = () => {
   }, [])
 
   return <div className="main app">
-    <Header title={"Ticket Detail"} hasBack hasMenu />
+    <Header title={"Item Detail"} hasBack />
     <div className="content full black">
       <div className="nft-detail mb50">
         <div className="nft-img">
-          <img src={NftImg} alt="" />
+          <img src={nft0} alt="" />
         </div>
         <div className="img-detail detail">
           <div className="img-top-info">
             <p className="title">
-              Axie #35786
+              Pick AXE
             </p>
 
             <div className="author-container">
               <div className="mr24">
                 <p className="author local-icon">
-                  Axie Infinity
+                  7:3 Revenue Share
                 </p>
               </div>
-              <p className="date date-icon">2022. 11. 31 ~ 2022. 12. 05</p>
+              <p className="date date-icon">12 days</p>
             </div>
           </div>
 
@@ -84,54 +84,11 @@ export const NftInfo = () => {
           <div className="line"></div>
         </div>
 
-        <div className="comment-container">
-          <p className="content-title mb20">
-            Comments
-          </p>
-          <div className="comment">
-            <div className="profile">
-              <img src={User1} alt="" />
-            </div>
-            <div className="">
-              <h4 className="name color-white bold mb11">Salvador Dali</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-              <p className="date color-white">Just now</p>
-            </div>
-          </div>
-
-          <div className="comment">
-            <div className="profile">
-              <img src={User2} alt="" />
-            </div>
-            <div className="">
-              <h4 className="name color-white bold mb11">Salvador Dali</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-              <p className="date color-white">Just now</p>
-            </div>
-          </div>
-
-          <div className="comment">
-            <div className="profile">
-              <img src={User3} alt="" />
-            </div>
-            <div className="">
-              <h4 className="name color-white bold mb11">Salvador Dali</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-              <p className="date color-white">Just now</p>
-            </div>
-          </div>
-        </div>
-
+        
         <div className="pb30">
-          <Link to="/purchase">
-            <div className="buy-button">
-              <p className="left-buy-text">
-                Buy Rent ticket
-              </p>
-              <div className="right-buy-text eth">
-                <p className="price-text big">0.321</p>
-                <p className="price-unit big">ETH</p>
-              </div>
+          <Link to="/rent">
+            <div className="rent-button d-flex x-center ">
+              <p>Rent Item</p>
             </div>
           </Link>
         </div>

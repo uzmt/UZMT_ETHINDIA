@@ -31,7 +31,7 @@ export const NftTabInfo = () => {
         Token Standard
       </p>
       <div className="common-box">
-        <p>Metaplex</p>
+        <p>ERC4907</p>
       </div>
     </div>
 
@@ -40,16 +40,7 @@ export const NftTabInfo = () => {
         Blockchain
       </p>
       <div className="common-box">
-        <p>Etherium</p>
-      </div>
-    </div>
-
-    <div className="mb24">
-      <p className="content-title mb12">
-        Matadata
-      </p>
-      <div className="common-box">
-        <p>Centralized</p>
+        <p>Polygon</p>
       </div>
     </div>
   </>

@@ -5,11 +5,51 @@ import { useState } from "react"
 import { TabMyNft } from "components/profile/TabMyNft"
 import { TabRent } from "components/profile/TabRent"
 import { TabInSell } from "components/profile/TabInSell"
+import Logo from "assets/img/logo-w.svg"
+import Arrow from "assets/img/Arrow_icon.png"
+import Whole from "assets/img/whole_icon.png"
+import Avatar from "assets/img/Avatar_icon.png"
+import { useAccount, useConnect, useDisconnect } from 'wagmi'
+import { InjectedConnector } from 'wagmi/connectors/injected'
+import { Link } from "react-router-dom"
 
 export const Profile = () => {
   const [tab, setTab] = useState<"my" | "sell" | "rent">("my")
+  const { address, isConnected } = useAccount()
+  const { connect } = useConnect({
+    connector: new InjectedConnector(),
+  })
+  const { disconnect } = useDisconnect()
 
-  return <div className="app black">
+  return (
+  <>
+  <div className="app home-tab-container">
+        <Link to="/game">
+          <img src={Logo} alt="logo" />
+        </Link>
+        <p className="title no-margin">
+
+        </p>
+        <div className="bell-container">
+          {
+            isConnected ? (
+              <div>
+                <Link to="/profile">
+                  <img src={Avatar} className="avatar"/>
+                </Link>
+              </div>
+            ) : (
+              <div className="d-flex row y-center">
+                <p className="wallet-connect">Tap to Connect wallet</p>
+                <img src={Arrow} />
+                <img src={Whole} onClick={() => connect()} />
+              </div>
+
+            )
+          }
+        </div>
+      </div>
+  <div className="app black">
     <div className="pb90">
       <div className="profile-bg"></div>
       <div className="">
@@ -59,23 +99,24 @@ export const Profile = () => {
           <div className={`tab ${tab === "my" ? "active" : ""}`} onClick={() => setTab("my")}>
             <p>My NFT</p>
           </div>
-          <div className={`tab ${tab === "sell" ? "active" : ""}`} onClick={() => setTab("sell")}>
-            <p>NFT in sell</p>
-          </div>
+          {
+            //<div className={`tab ${tab === "my" ? "active" : ""}`} onClick={() => setTab("my")}>
+            //<p>NFT in sell</p>
+            //</div>
+          }
           <div className={`tab ${tab === "rent" ? "active" : ""}`} onClick={() => setTab("rent")}>
             <p>NFT in Rent</p>
           </div>
+          
+          
         </div>
-
-
-        {tab === "my" && <TabMyNft />}
-        {tab === "sell" && <TabInSell />}
+        {tab === "my" && <TabInSell />}
         {tab === "rent" && <TabRent />}
 
 
       </div>
     </div>
-    <BottomTab theme={"light"} />
   </div>
 
+</>)
 }
