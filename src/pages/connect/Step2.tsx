@@ -30,7 +30,7 @@ export const Step2 = () => {
         <div className="d-flex y-center">
           <div className="mr24">
             <p className="author dot-icon color-white">
-              70:30 Revenue Share
+              30:70 Revenue Share
             </p>
           </div>
           <p className="date date-icon color-white">12 days</p>

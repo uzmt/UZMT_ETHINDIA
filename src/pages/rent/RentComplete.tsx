@@ -46,7 +46,7 @@ export const RentComplete = () => {
           <div className="author-container">
             <div className="mr24">
               <p className="author dot-icon">
-                7:3 Revenue Share
+                30:70 Revenue Share
               </p>
             </div>
             <p className="date date-icon">2022. 12. 5 ~ 2022. 12. 17</p>

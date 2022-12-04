@@ -23,13 +23,16 @@ export const NftCell = ({ num }: { num?: number }) => {
         Pick AXE
         </p>
 
-        <div className="author-container">
-          <div className="mr24">
-            <p className="author dot-icon ">
-              Yu-Gi-Yn
+        <div className="author-container d-flex">
+          <div className="mr24 d-flex colum">
+            <p className="author dot-icon mb10">
+              MINER
+            </p>
+            <p className="">
+            Pickaxes used in the ETHIndia MINER P2E mining game
             </p>
           </div>
-          <p className="date date-icon">2022. 11. 31 ~ 2022. 12. 05</p>
+          
         </div>
       </div>
 

@@ -9,7 +9,7 @@ export const NftTabInfo = () => {
       </p>
       <div className="copy-container">
         <p>
-          Tokenkd31021mdoq301...mdoq301eQ5D
+          T0x6C6034dcb78891874133CB0FdB243D0e3cA7e767
         </p>
         <img src={Copy} alt="" />
       </div>
@@ -21,7 +21,7 @@ export const NftTabInfo = () => {
       </p>
       <div className="copy-container">
         <p>
-          Tokenkd31021mdoq301...mdoq301eQ5D
+          1
         </p>
         <img src={Copy} alt="" />
       </div>

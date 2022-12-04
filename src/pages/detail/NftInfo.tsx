@@ -32,7 +32,7 @@ export const NftInfo = () => {
             <div className="author-container">
               <div className="mr24">
                 <p className="author local-icon">
-                  7:3 Revenue Share
+                  30:70 Revenue Share
                 </p>
               </div>
               <p className="date date-icon">12 days</p>
@@ -61,7 +61,7 @@ export const NftInfo = () => {
             Description
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
+          Pickaxes used in the ETHIndia MINER P2E mining game
           </p>
         </div>
       </div>

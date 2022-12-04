@@ -27,7 +27,7 @@ export const TabRent = () => {
           <div className="author-container">
             <div className="mr24">
               <p className="author local-icon">
-                7:3 Revenue Share
+                30:70 Revenue Share
               </p>
             </div>
             <p className="date date-icon">12 days</p>
