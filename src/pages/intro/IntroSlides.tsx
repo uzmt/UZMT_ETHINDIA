@@ -1,6 +1,7 @@
 import Slide1 from 'assets/img/slide-step1.png';
 import Slide2 from 'assets/img/slide-step2.png';
 import Slide3 from 'assets/img/slide-step3.png';
+import Slide4 from 'assets/img/slide-step4.png';
 import CircleArr from 'assets/img/right-circle-arrow.svg';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
@@ -31,7 +32,7 @@ const steps = [
     title: `Shall we enjoy 
     the game now?`,
     description: `You can enjoy the game without any burden of money.`,
-    image: '',
+    image: Slide4,
     curTitle: `Settlement`,
   },
 ];
